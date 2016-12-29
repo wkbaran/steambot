@@ -1,0 +1,5 @@
+#!/bin/sh
+/sbin/pidof /home/wkbaran/webapps/steambot/bin/node > /dev/null 2>&1 && exit 0
+mkdir -p /home/wkbaran/webapps/steambot/run
+nohup /home/wkbaran/webapps/steambot/bin/node /home/wkbaran/webapps/steambot/hello-world.js > /dev/null 2>&1 &
+/sbin/pidof /home/wkbaran/webapps/steambot/bin/node > /home/wkbaran/webapps/steambot/run/node.pid

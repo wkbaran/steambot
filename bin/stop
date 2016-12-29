@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/pkill -f /home/wkbaran/webapps/steambot/bin/node && rm -f /home/wkbaran/webapps/steambot/run/node.pid

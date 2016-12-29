@@ -7,14 +7,13 @@ var http = require("http"),
 
 http.createServer(function(request, response) {
 
-  var uri = url.parse(request.url).pathname,
-    filename = path.join(process.cwd(), uri);
+  var uri = url.parse(request.url).pathname;
+  filename = path.join(process.cwd()+"/public", uri);
   
   fs.exists(filename, function(exists) {
     // Only serve content out of the public directory,
     // and only serve files
     if ( !exists || 
-         !uri.startsWith("/public/") ||
          fs.statSync(filename).isDirectory() ) {
       response.writeHead(404, {"Content-Type": "text/plain"});
       response.write("404 Not Found\n");
