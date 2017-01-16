@@ -1,6 +1,0 @@
-insert or replace into steamgames (
-steam_appid, name, is_free, initial_price, final_price, 
-discount_percent, recommendations, coming_soon, release_date ) 
-values ( $appid, $name, $is_free, $price_overview.initial, 
-$price_overview.final, $price_overview.discount_percent, 
-$recommendations, $release_date.coming_soon, $release_date.date )
